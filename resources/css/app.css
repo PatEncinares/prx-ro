@@ -64,3 +64,120 @@ select:focus[data-flux-control] {
 /* \[:where(&)\]:size-4 {
     @apply size-4;
 } */
+
+
+.card-corner {
+  position: relative;
+  padding: 1.5rem;
+  background: #2B1B07;
+  border: 3px solid #D1A13A;
+  clip-path: polygon(
+    6px 0, calc(100% - 6px) 0,
+    100% 6px, 100% calc(100% - 6px),
+    calc(100% - 6px) 100%, 6px 100%,
+    0 calc(100% - 6px), 0 6px
+  );
+}
+
+.card-corner::after {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border: 1px solid rgba(209, 161, 58, 0.6);
+  clip-path: inherit;
+  pointer-events: none;
+}
+
+.card-corner {
+  box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+}
+
+.btn-corner {
+  display: inline-block;
+  background: #2B1B07;
+  color: #D1A13A;
+  border: 2px solid #D1A13A;
+  font-weight: bold;
+  padding: 0.4rem 0.8rem;
+  text-align: center;
+  clip-path: polygon(
+    4px 0, calc(100% - 4px) 0,
+    100% 4px, 100% calc(100% - 4px),
+    calc(100% - 4px) 100%, 4px 100%,
+    0 calc(100% - 4px), 0 4px
+  );
+  transition: background 0.2s ease;
+}
+.btn-corner:hover {
+  background: #714a15;
+  cursor: pointer;
+}
+
+.panel-title {
+  text-align: center;
+  color: #D1A13A;
+  font-size: 1.25rem; /* same as text-xl */
+  font-weight: bold;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #D1A13A;
+}
+
+.ragna-title {
+  text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+}
+
+.bg-gradient-radial {
+  background: radial-gradient(circle, rgba(0,0,0,0.4) 0%, transparent 70%);
+}
+
+
+
+.clip-corner {
+  clip-path: polygon(8px 0, calc(100% - 8px) 0, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 0 calc(100% - 8px), 0 8px);
+}
+
+/* Quick link buttons */
+.quick-link-btn {
+  width: 100%;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #FFD700;
+  border-top: 1px solid #D1A13A;
+  /* background: #3A250A; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.2s ease;
+}
+.quick-link-btn:first-child {
+  border-top: none;
+}
+.quick-link-btn:hover {
+  background: #4A3214;
+}
+
+
+.panel-header {
+  color: #FFD700; /* bright gold */
+}
+
+.panel-text {
+  color: #D4B46A; /* softer muted gold */
+}
+
+.panel-meta {
+  color: #C2A45D; /* dimmed gold */
+  font-size: 0.85rem;
+}
+
+a.panel-link {
+  color: #FFE066;
+  text-decoration: none;
+}
+a.panel-link:hover {
+  text-decoration: underline;
+}
+

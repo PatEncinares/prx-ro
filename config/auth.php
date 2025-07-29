@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\GameAccount;
+
 return [
 
     /*
@@ -40,6 +42,11 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+
+        'game' => [
+            'driver' => 'session',
+            'provider' => 'game_accounts',
+        ],
     ],
 
     /*
@@ -69,6 +76,11 @@ return [
         //     'driver' => 'database',
         //     'table' => 'users',
         // ],
+
+        'game_accounts' => [
+            'driver' => 'eloquent',
+            'model' => GameAccount::class,
+        ],
     ],
 
     /*
