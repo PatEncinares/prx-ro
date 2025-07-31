@@ -39,6 +39,7 @@
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
             <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+            <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&display=swap" rel="stylesheet">
 
             <!-- Font Awesome CDN -->
 
@@ -53,14 +54,14 @@
         </head>
             <body class="font-inter antialiased scroll-smooth">
                 <div class="min-h-screen ">
-                    <livewire:layouts.navigation />
+                    {{-- <livewire:layouts.navigation /> --}}
 
                     <!-- Page Content -->
                 <main>
                     {{ $slot }}
                 </main>
 
-                <livewire:layouts.footer />
+                {{-- <livewire:layouts.footer /> --}}
 
             
             </div>
